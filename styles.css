@@ -1,0 +1,136 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap');
+
+:root {
+    --start-color: #D9D9D9;
+    --invalid-color: #FF0404;
+    --warning-window-color: rgba(255, 204, 0, 0.9);
+    --regular-weight: 400;
+    --medium-weight: 500;
+    --bold-weight: 700;
+    --small-font: 32px;
+    --medium-font: 40px;
+    --large-font: 128px;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    margin: 0;
+    background-color: white;
+}
+
+.countdown-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    width: 80%;
+}
+
+.date-component {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 15%;
+}
+
+.weeks-display, .days-display, .hours-display, .minutes-display, .seconds-display {
+    font-size: var(--large-font);
+    font-weight: var(--bold-weight);
+}
+
+.month-input, .day-input, .year-input {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.date-input-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    width: 50%;
+}
+
+.month, .day {
+    height: 160px;
+    width: 146px;
+    font-size: var(--large-font);
+    font-weight: var(--bold-weight);
+    border-width: 0;
+    outline: none;
+    background-color: var(--start-color);
+    border-radius: 10px;
+}
+
+.year {
+    height: 160px;
+    width: 292px;
+    font-size: var(--large-font);
+    font-weight: var(--bold-weight);
+    border-width: 0;
+    outline: none;
+    background-color: var(--start-color);
+    border-radius: 10px;
+}
+
+.label {
+    font-size: var(--medium-font);
+    font-weight: var(--regular-weight);
+}
+
+.guide {
+    margin-top: 50px;
+    font-weight: var(--medium-weight);
+    font-size: var(--medium-font);
+}
+
+.start-guide {
+    color: var(--start-color);
+}
+
+.invalid-guide {
+    color: var(--invalid-color);
+    transition: 1s ease-out;
+}
+
+.warning-window {
+    border-radius: 20px 20px 0 0;
+    box-shadow: 0 4px 20px 10px rgba(0, 0, 0, 0.25);
+    background-color: var(--warning-window-color);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: auto;
+    padding-left: 30px;
+    padding-right: 30px;
+    position: absolute;
+    overflow: hidden;
+    transition: all 0.5s;
+    height: 13%;
+    top: 87%;
+}
+
+.warning-text {
+    font-size: var(--small-font);
+    font-weight: var(--regular-weight);
+}
+
+.hide-warning-window {
+    top: 100%;
+    height: 0;
+    box-shadow: none;
+}
+
+.hide {
+    display: none;
+}
+
+input[type=number]::-webkit-inner-spin-button, 
+input[type=number]::-webkit-outer-spin-button { 
+    -webkit-appearance: none;
+    -moz-appearance: textfield;
+}
